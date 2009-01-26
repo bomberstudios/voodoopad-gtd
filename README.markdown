@@ -2,7 +2,14 @@
 
 This is a collection of script plugins for [VoodooPad](http://www.flyingmeat.com/voodoopad/) that I use for my GTD workflow.
 
-## My workflow
+## Install
+- Copy scripts to `$HOME/Library/Application Support/VoodooPad/Script PlugIns/`
+- Restart VoodooPad
+- Create "Task List" and "Task Report" pages.
+- Read "How to use"
+
+
+## How to use
 - Take notes (in a somehow chaotic way).
 - Whenever you find something to be done (i.e: a task) you just add "@todo:" in front of it.
 - When you need a task list, you just hit Control + Shift + T and all "@todo:" tags in the current document are listed on a "Task List" page (with a link to the page where the task is)
