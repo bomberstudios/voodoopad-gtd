@@ -17,5 +17,4 @@ This is a collection of script plugins for [VoodooPad](http://www.flyingmeat.com
 - When you need to check what you've acomplished recently, hit Control + Shift + D, and a "Task Report" page is created with a list of "@done:" tasks.
 
 ## TODO
-- Make the script create the "Task List" and "Task Report" pages if they are not already there.
 - Build a "Check as Completed" script.
