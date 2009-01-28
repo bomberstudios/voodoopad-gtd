@@ -23,7 +23,6 @@ def main(windowController, *args, **kwargs):
         if line.find(tag_name) >= 0:
           theList = theList + page.displayName() + line.partition(tag_name)[2] + "\n"
   theList = theList + "\n\n--\nUpdated at " + time.strftime("%d %b %Y %H:%M",time.localtime())
-  document.createNewPageWithName_(list_page)
-  page = document.pageForKey_(list_page)
+  page = document.createNewPageWithName_(list_page)
   page.setDataAsString_(theList)
   document.openPageWithTitle_(list_page)
