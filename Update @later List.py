@@ -10,10 +10,9 @@ VPShortcutMask = "control"
 import time
 
 tag_name = "@later"
-list_page = "Task List - Later"
 
 def main(windowController, *args, **kwargs):
-  theList = "Task List - Later\n\n"
+  theList = ""
   document = windowController.document()
   for key in document.keys():
     page = document.pageForKey_(key)
@@ -23,7 +22,6 @@ def main(windowController, *args, **kwargs):
         if line.find(tag_name) >= 0:
           theList = theList + page.displayName() + line.partition(tag_name)[2] + "\n"
   theList = theList + "\n\n--\nUpdated at " + time.strftime("%d %b %Y %H:%M",time.localtime())
-  document.createNewPageWithName_(list_page)
-  page = document.pageForKey_(list_page)
+  page = document.createNewPageWithName_(tag_name)
   page.setDataAsString_(theList)
-  document.openPageWithTitle_(list_page)
+  document.openPageWithTitle_(tag_name)
