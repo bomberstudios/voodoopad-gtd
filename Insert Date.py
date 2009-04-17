@@ -29,5 +29,5 @@ def main(windowController, *args, **kwargs):
 
     if textView != None:
         dateFormat = time.strftime("%Y%m%d")
-        textView._insertText(dateFormat)
+        textView.insertText_(dateFormat)
 

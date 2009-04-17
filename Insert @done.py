@@ -27,4 +27,4 @@ def main(windowController, *args, **kwargs):
     document = windowController.document()
 
     if textView != None:
-        textView._insertText("@done:")
+        textView.insertText_("@done:")
