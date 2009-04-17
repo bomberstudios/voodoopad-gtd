@@ -32,10 +32,11 @@ def main(windowController, *args, **kwargs):
         page = document.pageForKey_(key)
         if page.uti() == "com.fm.page":
             attString = page.dataAsAttributedString()
-            for line in attString.mutableString().splitlines():
-                if line.find(tag_name) >= 0:
-                    theList = theList + page.displayName() + line.partition(tag_name)[2] + "\n"
-    theList = theList + "\n\n--\nUpdated at " + time.strftime("%d %b %Y %H:%M",time.localtime())
+            if attString.mutableString().find(tag_name) >= 0:
+                for line in attString.mutableString().splitlines():
+                    if line.find(tag_name) >= 0:
+                        theList += page.displayName() + line.partition(tag_name)[2] + "\n"
+    theList += "\n\n--\nUpdated at " + time.strftime("%d %b %Y %H:%M",time.localtime())
     page = document.createNewPageWithName_(tag_name)
     page.setDataAsString_(theList)
     document.openPageWithTitle_(tag_name)
