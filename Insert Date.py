@@ -21,6 +21,7 @@ VPShortcutMask = "control"
 VPShortcutKey = "J"
 
 import AppKit
+import time
 
 def main(windowController, *args, **kwargs):
     textView = windowController.textView()
