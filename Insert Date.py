@@ -28,6 +28,6 @@ def main(windowController, *args, **kwargs):
     document = windowController.document()
 
     if textView != None:
-        dateFormat = time.strftime("%Y%m%d")
+        dateFormat = time.strftime("%Y.%m.%d")
         textView.insertText_(dateFormat)
 
